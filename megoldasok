@@ -1,0 +1,24 @@
+3. Feladat
+SELECT honnan, hova, indul, erkezik FROM menetrend WHERE jarat='J1'
+
+4. Feladat
+SELECT hova
+FROM menetrend 
+WHERE honnan="Balatonfüred" and indul BETWEEN "11:30"
+and "12:30";
+
+5. Feladat
+SELECT hova, Count(*) 
+FROM menetrend 
+GROUP BY hova 
+ORDER BY Count(*) DESC;
+
+6. Feladat
+SELECT min(erkezik) 
+FROM menetrend 
+WHERE hova="Balatonföldvár";
+
+7. Feladat
+SELECT max(erkezik) AS be 
+FROM menetrend 
+WHERE jarat="E2";
